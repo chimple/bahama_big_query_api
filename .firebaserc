@@ -1,5 +1,5 @@
 {
   "projects": {
-    "default": "bahama-big-query-api"
+    "default": "bahama-stage"
   }
 }

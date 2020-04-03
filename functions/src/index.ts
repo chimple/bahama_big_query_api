@@ -16,6 +16,7 @@ interface UserInfo {
     world: number
     adId: string
     dateStamp: string
+    skills: string
 }
 
 const logsCollection = 'logs';
@@ -40,7 +41,8 @@ app.post('/logs', async (request, response) => {
             userId     : request.body['userId'],
             appName    : request.body['appName'],
             world      : request.body['world'],
-            dateStamp  : request.body['dateStamp']
+            dateStamp  : request.body['dateStamp'],
+            skills     : request.body['skills']
         };
 
         const key = userInfo.dateStamp + '|' + userInfo.userId;
