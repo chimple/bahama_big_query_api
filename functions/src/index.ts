@@ -10,13 +10,12 @@ app.use(cors({origin: true}));
 
 interface UserInfo {
     appName: string
-    level: number
+    topics: number
     sessionTime: number
     userId: string
-    world: number
     adId: string
     dateStamp: string
-    skills: string
+    skills: number
 }
 
 const logsCollection = 'logs';
@@ -36,11 +35,10 @@ app.post('/logs', async (request, response) => {
     try {
         const userInfo: UserInfo = {
             adId       : request.body['adId'],
-            level      : request.body['level'],
+            topics      : request.body['topics'],
             sessionTime: request.body['sessionTime'],
             userId     : request.body['userId'],
             appName    : request.body['appName'],
-            world      : request.body['world'],
             dateStamp  : request.body['dateStamp'],
             skills     : request.body['skills']
         };
